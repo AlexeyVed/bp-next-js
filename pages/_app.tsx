@@ -1,8 +1,11 @@
 import '../styles/globals.scss'
-import type { AppProps } from 'next/app'
+import { TAppPropsWithLayout } from '../types'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }: TAppPropsWithLayout) {
+
+  const getLayout = Component.getLayout ?? ((page) => page)
+
+  return getLayout(<Component {...pageProps} />)
 }
 
 export default MyApp
