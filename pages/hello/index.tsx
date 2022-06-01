@@ -1,6 +1,6 @@
 // REF: https://mdxjs.com/getting-started#working-with-components
 
-import Content from "./hello.mdx";
+import Content from "../../content/hello.mdx";
 
 import NavButton from '../../components/UI/NavButton'
 
